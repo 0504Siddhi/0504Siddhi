@@ -20,7 +20,7 @@ Third-year Computer Engineering student at PVG's COET&M, Pune (B.E. 2024–2028)
 | Innovate4Impact: AI4SDG Global Hackathon 2026 | Global | Top 200 | Nirdosh Vault |
 | InnovaHack 2026 | National | Top 200–250 | Nirdosh Vault |
 | Lenovo LEAP Hackathon 2026 | Maharashtra (300+ teams) | Top 70 | Nirdosh Vault |
-| NEUROVERSE Ideathon 2026 | PVGCOET&M,Pune | Top 30 | NeuroSpec |
+| NEUROVERSE Ideathon 2026 | PVGCOET&M,Pune (60+ teams) | Top 30 | NeuroSpec |
 | Environmental Hacks: Bharat Builds Tour (WeMakeDevs × AWS Builder Center), Heat & Water track | National | Participant | Pune Flood Watch |
 | Smart India Hackathon 2025 & 2026 | National | Participant | Pathshala+ · IP-SAKTI Sahayak |
 
