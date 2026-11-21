@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Siddhi Jadhav</title>
+<style>
+:root{
+  --bg:#EEF1F6; --panel:#E3E8F1; --ink:#101828; --mute:#4A5568; --line:#C3CCDB; --accent:#2740D6;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E1320; --panel:#161D31; --ink:#E6EAF2; --mute:#A3AEC4; --line:#2A3452; --accent:#9DAEFF;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.65 var(--sans);-webkit-text-size-adjust:100%}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+main{max-width:62rem;margin:0 auto;padding:clamp(2.5rem,7vw,5rem) 1.25rem 4rem}
+h1{font:600 clamp(2.4rem,7vw,4.4rem)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 1.25rem}
+h1 + p{font-size:1.2rem;max-width:40rem}
+h2{font:600 1.8rem/1.2 var(--serif);margin:3.5rem 0 1.25rem;padding-bottom:.6rem;border-bottom:1.5px solid var(--ink)}
+p{max-width:44rem}
+.scroll{overflow-x:auto;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:.98rem}
+th,td{text-align:left;padding:.7rem .85rem .7rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--mute);border-bottom:1.5px solid var(--ink);white-space:nowrap}
+td:first-child{font-weight:600;font-family:var(--serif);font-size:1.05rem}
+@media (max-width:40rem){table{min-width:34rem}}
+#status{color:var(--mute)}
+</style>
+</head>
+<body>
+<main id="readme"><p id="status">Loading…</p>
+<noscript><p><a href="https://github.com/0504Siddhi">View my profile on GitHub</a></p></noscript></main>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script>
+// This page shows the README of github.com/0504Siddhi/0504Siddhi exactly as it is.
+// Edit the README on GitHub and this page updates by itself.
+var box = document.getElementById("readme");
+function getText(r) { if (!r.ok) throw new Error("bad"); return r.text(); }
+fetch("https://api.github.com/repos/0504Siddhi/0504Siddhi/readme", { headers: { Accept: "application/vnd.github.raw" } })
+  .then(getText)
+  .catch(function () {
+    return fetch("https://raw.githubusercontent.com/0504Siddhi/0504Siddhi/main/README.md").then(getText);
+  })
+  .then(function (md) {
+    box.innerHTML = DOMPurify.sanitize(marked.parse(md));
+    box.querySelectorAll("table").forEach(function (t) {
+      var w = document.createElement("div");
+      w.className = "scroll";
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    });
+  })
+  .catch(function () {
+    box.innerHTML = '<p>Could not load the page. <a href="https://github.com/0504Siddhi">View my profile on GitHub</a>.</p>';
+  });
+</script>
+</body>
+</html>
